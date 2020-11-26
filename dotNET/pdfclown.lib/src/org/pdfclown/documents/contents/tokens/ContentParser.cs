@@ -82,7 +82,7 @@ namespace org.pdfclown.documents.contents.tokens
       else if(operation is BeginMarkedContent) // Marked-content sequence.
         return new MarkedContent(
           (BeginMarkedContent)operation,
-          ParseContentObjects()
+          new List<ContentObject>() //ParseContentObjects()
           );
       else if(operation is BeginInlineImage) // Inline image.
         return ParseInlineImage();
@@ -103,11 +103,11 @@ namespace org.pdfclown.documents.contents.tokens
         // Multiple-operation graphics object end?
         if(contentObject is EndText // Text.
           || contentObject is RestoreGraphicsState // Local graphics state.
-          || contentObject is EndMarkedContent // End marked-content sequence.
+          //|| contentObject is EndMarkedContent // End marked-content sequence.
           || contentObject is EndInlineImage) // Inline image.
           return contentObjects;
-
-        contentObjects.Add(contentObject);
+        if (!(contentObject is EndMarkedContent))
+            contentObjects.Add(contentObject);
       }
       return contentObjects;
     }

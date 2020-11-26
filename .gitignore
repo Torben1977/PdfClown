@@ -3,3 +3,8 @@
 ################################################################################
 
 /dotNET/pdfclown.lib/build/package
+/dotNET/.vs/PDFClown/v16/TestStore/0
+/dotNET/.vs/PDFClown/v16/.suo
+/dotNET/pdfclown.lib/obj/x86/Debug
+/dotNET/pdfclown.samples.cli/build/package
+/dotNET/pdfclown.samples.cli/obj/x86/Debug
