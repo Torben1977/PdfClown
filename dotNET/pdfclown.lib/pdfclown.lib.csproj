@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -9,6 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>org.pdfclown</RootNamespace>
     <AssemblyName>PDFClown</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
@@ -28,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\org\pdfclown\bytes\filters\ASCII85Filter.cs" />
@@ -587,14 +591,5 @@
       <LogicalName>fonts.cff.StandardStrings</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\org\pdfclown\documents\functions\" />
-    <Folder Include="src\org\pdfclown\util\parsers\" />
-    <Folder Include="src\org\pdfclown\util\math\geom\" />
-    <Folder Include="src\org\pdfclown\tokens\" />
-    <Folder Include="src\org\pdfclown\documents\contents\layers\" />
-    <Folder Include="src\org\pdfclown\util\metadata\" />
-    <Folder Include="src\org\pdfclown\documents\interchange\access\" />
-    <Folder Include="src\org\pdfclown\documents\interaction\annotations\styles\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
