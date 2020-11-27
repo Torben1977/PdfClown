@@ -82,7 +82,7 @@ namespace org.pdfclown.documents.contents.tokens
       else if(operation is BeginMarkedContent) // Marked-content sequence.
         return new MarkedContent(
           (BeginMarkedContent)operation,
-          new List<ContentObject>() //ParseContentObjects()
+          new List<ContentObject>() //ParseContentObjects() FIX 
           );
       else if(operation is BeginInlineImage) // Inline image.
         return ParseInlineImage();
